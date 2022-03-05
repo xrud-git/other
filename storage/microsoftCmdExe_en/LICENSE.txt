@@ -1,0 +1,41 @@
+
+All content of each folder in this list (folder), is licensed under this license.
+
+
+# Contribution license, short
+
+1. Definitions:
+
+	* "This Work" means all the work, including but not limited to physical objects, software, data and all other matters, of any kind, to which this license applies.
+
+	* "Applicable Agreements" means all applicable agreements.
+
+	* "Applicable Licenses" means all applicable licenses.
+
+	* "Admin" means entity which, as explicitly provided in Applicable Agreements, is owner of This Work. Without the changes provided by agreements: only authors of This Work are the owners and can specify other owners.
+
+
+2. Everyone is free to make, use, and distribute copies of This Work, for any purpose. But only in conjunction with this license.
+
+3. Everyone is free to modify This Work, but only if each of the resulting versions of each involved part of This Work:
+
+	* Is published as a derivative, on the official distribution resource of This Work. For example: as a pull request in it's repository.
+
+	* Or is not distributed other than: privately, to small amount of persons, with not less than reasonable effort to prevent distribution beyond this limit.
+
+	Each part of work which is contributed to This Work. Unless its provided under other applicable license, Is licensed under this license, as a part of This Work. All authors and other entities transfer all their rights in that work, except: rights provided to them, in this license. To Admins.
+
+	Noone except Admins, has right to otherwise distribute modified versions of: This Work, or part of This Work. Except as otherwise provided in other of Applicable Agreements between Admin and the subject entity.
+	
+4. Noone except Admins, has right to:
+
+	* Relicense This Work.
+
+	* Or distribute it in compiled or "Closed Source" form.
+
+	Except as otherwise provided in other of Applicable Agreements between Admin and the subject entity.
+
+
+5. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+[ver 0.8]

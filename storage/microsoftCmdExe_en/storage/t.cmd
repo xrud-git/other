@@ -1,0 +1,4 @@
+
+echo t
+
+goto :eof
