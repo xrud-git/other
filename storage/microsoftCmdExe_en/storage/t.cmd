@@ -1,4 +1,2 @@
 
-echo t
-
-goto :eof
+echo(t %*

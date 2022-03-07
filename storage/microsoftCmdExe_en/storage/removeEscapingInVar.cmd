@@ -20,8 +20,7 @@ for /f usebackq^ tokens^=*^ delims^=^ eol^= %%x in ('!%~2!') do (
 set "v_f=!v_sc_sc_f:~0,-1!"
 
 
-rem echo(removeEscapingInVar !v_f!
-goto :eof
+rem echo(end removeEscapingInVar !v_f!
 
 
 rem # info_dev

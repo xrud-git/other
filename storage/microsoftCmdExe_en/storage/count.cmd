@@ -1,0 +1,19 @@
+
+rem 
+rem 
+rem %~2 -- path .
+rem 
+rem !nu_f! -- number .
+rem 
+rem 
+
+rem echo(count %*
+
+
+set "nu_f=0"
+for /f usebackq^ tokens^=*^ delims^=^ eol^= %%x in ("%~2") do (
+	set /a "nu_f= !nu_f! + 1"
+)
+
+
+rem echo(!nu_f!

@@ -34,9 +34,7 @@ rem //# [1] ver_StringManipulation
 :f_separateVar
 for /f usebackq^ tokens^=*^ delims^=^ eol^= %%x in ('!v_f!') do (
 	set "v3_f=!v_sc_f!"
-	@REM echo t1 !v_sc_f! %%x
 	set "v2_f=!v_sc_f:*%%x=!"
-	@REM echo t2 !v2_f!
 	
 	if "!v2_f!" equ "" (
 		rem //# required by [2]
@@ -65,7 +63,6 @@ set "v_f=!v1_f!"
 rem echo(# end separateVar
 rem echo(!v_f!
 rem echo(# ;
-goto :eof
 
 
 rem # info_dev

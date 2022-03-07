@@ -20,4 +20,3 @@ for /f skip^=1^ usebackq^ tokens^=*^ delims^=^ eol^= %%x in ('!%~2!') do (
 
 
 rem echo(escapeVar !v_f!
-goto :eof

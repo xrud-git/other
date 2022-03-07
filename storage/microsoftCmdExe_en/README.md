@@ -11,64 +11,62 @@ Please feel free to contribute .
 
 Features
 * Doesn't have other limitations than ones which is unavoidably forced by cmd.exe .
-* [dev] Support for maximum amount of variative text characters ( most of other cmd scripts doesn't support some of them in variables, filenames, file content or/and other . even though its not prominent ) .
-* Is an Open Source library .
+* [dev] Supports maximum amount of different text characters ( most of other cmd scripts doesn't support some of them in variables, filenames, file content or/and other . even though its not prominent ) .
+* Is an Open Source library under Xrud authority .
+
+For development info and support see [v_dev](v_dev) .
+
+For cmd and cmd_en documentation see [info](info.md) .
 
 
 ## Usage
 
-Not more than 8192 characters per text line of data .
+Not more than 8184 characters per text line of data .
 
-You can save values with `"` to variables, but not pass them {to functions / as parameters} (if you try, they will be processed, and will not: work in all cases) .
+!! Do not forget to delete files/storages, paths to which, result from functions .
 
-To pass such value to function, its needed to
-* Pass it by variable name .
+You can save values with `"` to variables, but to pass them {to functions / as parameters}, pass them by variable name .
 
-	You could also escape `!` and use variable name as a call, but this works not always .
-	```
-	set "v1=1!br!2"
-	set "v=call !en! forEachInVar "v1" "echo 3 4" "echo 5""
-
-	call :sc "^!v^!"
-	
-	pause
+If you want to pass script, save it to file, and process the file from/using the function . This is the only consistent way, see [info](info.md) for more .
+```
+@if "%~1" equ "1" (
+	echo(%~2
 	goto :eof
-	:sc
-		%~1
+)
+@setLocal enableDelayedExpansion enableExtensions
+@call en
+
+call !en! sto "f_sc" "cmd"
+( echo(call "%~f0" 1 "^^^!v_f^^^!"
+)> "!v_f!"
+set "v_sc_f=!v_f!"
+
+call :sc "!v_f!"
+
+call !en! removeFile "!v_sc_f!"
+
+pause
+goto :eof
+:sc
+	set "v_f=1 2"
+	call "%~1"
 	goto :eof
-	```
+```
+* For the functions, we limited passing scripts, to files only -- so you wouldn't have to: add `call ` the most of times, see [info\\#1](info.md) .
 
-	If variable name is used as a call, the call won't: process `%%<<letter>>`, at the time when its expected to .
+To write/save something to file, you should always use
+```
+(<<optional whitespace>>echo(rem Escaping: ^^^! ^" ^^^) ^^^> ^^^> .
+)<<`>` or {`>` + `>`}>> "<<path>>"
+```
+* otherwise it'll be needed to escape number at end of the line .
 
-* Save it to file, and process the file from/using the function .
-
-	```
-	if "%~1" equ "1" (
-		echo(%~2
-		goto :eof
-	)
-	
-	set "v=1!br!2"
-	
-	call !en! sto "f_sc" "cmd"
-	echo(call "%~f0" 1 "^^^!v_f^^^!">"!v_f!"
-	set "v_sc_f=!v_f!"
-	
-	call !en! forEachInVar "v" "!v_sc_f!" "!v_sc_f!"
-
-	call !en! deSto "!v_sc_f!"
-	
-	pause
-	```
-	
-Variables which was defined in functions (for example "v_f") can't pass the subject values by their variable names, to the other functions on same or upper level .
-
-`<<br>>:<<name>>` Labels sometimes doesn't work in sequences of calls, with `call` and `goto` .
+Variables which was defined in functions (for example "v_f") can't pass the subject values by their variable names, to the other functions on same level, can can to -- Ones on the higher level [dev next or all] .
 
 
 ## init
 
-Set relevant `v_f` and `v1_f` paths in the en.cmd .
+Set relevant `v_f` and `call` paths in the en.cmd .
 
 ### init_cmd_en
 
@@ -81,7 +79,7 @@ To load cmd_en -- before commands that require it, insert in {.cmd / .bat} that 
 	@setLocal enableDelayedExpansion enableExtensions
 	@set "v_f=%~dp0"
 	@set "v_f=!v_f:~0,-1!"		&rem [dev path_home] current folder for results/output, for example Desktop . the default value is location of the file with init_cmd_en .
-	@call "!v_f!\assets\en.cmd"		&rem <<if needed, change the path to be to the file>>
+	@call "!v_f!\assets\microsoftCmdExe_en\en.cmd"		&rem <<if needed, change the path to be to the file>>
 	rem !!! if the script file is executed trough Windows Symbolic Link, the `!v_f!` will target the storage folder of the link .
 	```
 
@@ -95,9 +93,12 @@ To load cmd_en -- before commands that require it, insert in {.cmd / .bat} that 
 #initialization #installation
 
 
-## Supported text characters
+## Other
+
+### Supported text characters
 
 [d li]
 ```
 <<[d]>>
 ```
+

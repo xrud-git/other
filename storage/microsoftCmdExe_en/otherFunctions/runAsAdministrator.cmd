@@ -18,8 +18,10 @@ rem //# "Run as administrator"
 			set "v_f=%*"
 		set v_f=!v_f:"=""!
 		rem "VBScript"
-			echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\getadmin.vbs"
-			echo UAC.ShellExecute "cmd.exe", "/c ""%~f0"" %v_f%", "", "runas", 1 >> "%temp%\getadmin.vbs"
+		(
+			echo Set UAC = CreateObject^("Shell.Application"^)
+			echo UAC.ShellExecute "cmd.exe", "/c ""%~f0"" %v_f%", "", "runas", 1
+		)> "%temp%\getadmin.vbs"
 		"%temp%\getadmin.vbs"
 		rem [dev ? cscript]
 		rem wait untill finished
@@ -46,10 +48,12 @@ rem 	rem "%*" == all parameters . the space is somewhy required .
 rem 		set "v_f=%*"
 rem 		set v_f=!v_f:"=`"!
 rem 	rem Powershell
-rem 		echo if (-Not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] 'Administrator')) {> "%temp%\getadmin.ps1"
-rem 		echo Start-Process -FilePath "%~f0" -Verb Runas -ArgumentList "%v_f%">> "%temp%\getadmin.ps1"
-rem 		echo }>> "%temp%\getadmin.ps1"
-rem 		echo Exit>> "%temp%\getadmin.ps1"
+rem 	(
+rem 		echo if (-Not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] 'Administrator')) {
+rem 		echo Start-Process -FilePath "%~f0" -Verb Runas -ArgumentList "%v_f%"
+rem 		echo }
+rem 		echo Exit
+rem 	)> "%temp%\getadmin.ps1"
 rem 	powershell.exe "%temp%\getadmin.ps1"
 rem 	rem wait untill finished
 rem 	rem del "%temp%\getadmin.ps1"
