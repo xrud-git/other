@@ -1,6 +1,5 @@
 
 rem 
-rem max array -- <7 items . idk why, each `call` decreases the amount of `for` repeats .
 rem 
 rem %2 = variable name .
 rem %3 = path to file with script for the 1st item :

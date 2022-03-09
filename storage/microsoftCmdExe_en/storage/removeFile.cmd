@@ -9,5 +9,7 @@ rem echo(do?: removeFile : %*
 rem pause
 
 
-del /f "%~2"
+if "%~2" neq "" (
+	del /f "%~2"
+)
 

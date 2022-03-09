@@ -10,12 +10,15 @@ rem )
 @rem ## info_dev
 @rem 
 	@rem 
+	@rem noticeably slow .
+	@rem 
 	@rem calling "if"-s after any "if" with specifically broken code Block, will break the processing .
 	@rem empty "(" .. ")" -s break script, add "rem " to them .
 	@rem 
 @rem ## ;
 
 @set "v2_f="
+
 
 @if "%~1" equ "file_cmd" (
 	call %en% sto "%~2" "cmd"
@@ -33,6 +36,8 @@ rem )
 	call %en% removeFile "%~2"
 	set "v2_f=2"
 )
+
+
 @if "%~1" equ "for" (
 	call %en% repeatNumberOfTimes "%~2" "%~3" "%~4"
 	set "v2_f=2"

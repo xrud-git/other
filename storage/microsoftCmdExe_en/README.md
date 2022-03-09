@@ -10,8 +10,7 @@ Enhancement for "cmd.exe"/Batch
 Please feel free to contribute .
 
 Features
-* Doesn't have other limitations than ones which is unavoidably forced by cmd.exe .
-* [dev] Supports maximum amount of different text characters ( most of other cmd scripts doesn't support some of them in variables, filenames, file content or/and other . even though its not prominent ) .
+* [dev] Doesn't have other limitations than ones which are unavoidably forced by cmd.exe .
 * Is an Open Source library under Xrud authority .
 
 For development info and support see [v_dev](v_dev) .
@@ -21,9 +20,11 @@ For cmd and cmd_en documentation see [info](info.md) .
 
 ## Usage
 
-Not more than 8184 characters per text line of data .
+Not more than 8184 characters per text line of data . Escaping -- `` ^! %% ^^ ^& ^* ^= ^' ^" ^| ^, ^< ^> `` .
 
 !! Do not forget to delete files/storages, paths to which, result from functions .
+
+!! `!v_f!` is overwritten at each of the calls, do not use it to pass values to the functions . (because these can use the other functions)
 
 You can save values with `"` to variables, but to pass them {to functions / as parameters}, pass them by variable name .
 

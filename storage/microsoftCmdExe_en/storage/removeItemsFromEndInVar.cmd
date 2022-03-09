@@ -27,12 +27,12 @@ if "%~1" equ "!path_sc_sc_f!" (
 	call !en! sto "f_!path_sc_sc_f!" "cmd"
 	(echo(call ^"%~f0^" 1 ^"^^^!v_f^^^!^"
 	)>"!v_f!"
-	set "v2_sc_sc_f=!v_f!"
+	set "v2_sc_sc_f="!v_f!""
 	
 	call !en! sto "f_!path_sc_sc_f!" "cmd"
 	(echo(call ^"%~f0^" 2 ^"^^^!v_f^^^!^"
 	)>"!v_f!"
-	set "v3_sc_sc_f=!v_f!"
+	set "v3_sc_sc_f="!v_f!""
 	
 	set "v_sc_sc_f="
 	call !en! forEachInVar "%~2" !v2_sc_sc_f! !v3_sc_sc_f!

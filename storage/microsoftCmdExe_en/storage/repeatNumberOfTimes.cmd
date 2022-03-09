@@ -1,6 +1,5 @@
 
 rem 
-rem !! idk why, variables won't keep the values between repeats . but will output the last .
 rem 
 rem ! do not forget `goto :eof` at end of the target script .
 rem 
