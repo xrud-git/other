@@ -1,7 +1,7 @@
 <div align=center><h3><b>
 Enhancement for "cmd.exe"/Batch
 </b></h3><b>
-[microsoftCmdExe_en] [ver 0.9]
+[microsoftCmdExe_en] [ver_0_10]
 
 [English]
 </b></div>

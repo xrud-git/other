@@ -1,7 +1,7 @@
 <div align=center><h3><b>
 Public Xrud storage
 </b></h3><b>
-[sto_0_Xrud] [ver_cu]
+[sto_0_Xrud] [ver_1]
 
 [English]
 </b></div>

@@ -17,14 +17,18 @@ if "%~3" equ "" (
 	set "v_f=!%~2!"
 ) else (
 	
-	rem //# [1=]
-	set "v1_f=!%~2:*%~3=!"
-	
-	call !en! countCharsInLine "%~3"
+	set "v_sc_f=%~3"
+	call !en! countCharsInVar "v_sc_f"
 	call !en! removeFromStartInLine "%~2" "!v_f!"
 	
-	if "!v_f!" neq "!v1_f!" (
+	rem //# [1=]
+	set "v_sc_f=!%~2:*%~3=!"
+	
+	if "!v_f!" neq "!v_sc_f!" (
 		set "v_f=!%~2!"
 	)
 	
 )
+
+
+rem echo(!v_f!

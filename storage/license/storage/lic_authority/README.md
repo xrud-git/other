@@ -3,4 +3,4 @@ This license for free-to-use products, is intended to unify the publication . To
 
 Everyone can contribute to the product, but publication of it requires additional explicitly granted permission .
 
-At modified parts of the original product, it require to keep the same or lower license restrictions .
+At modified parts of the original product, it require to keep the license restrictions, but allows to add any other .
