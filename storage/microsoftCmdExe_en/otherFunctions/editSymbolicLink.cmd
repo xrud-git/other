@@ -16,7 +16,7 @@ rem //# "Run as administrator"	[d cmd_en]
 	)
 	goto end_uacPrompt
 :uacPrompt
-	rem "%*" == all parameters . the space is somewhy required .
+	rem "%*" == all parameters .
 		set "v_f=%*"
 		set v_f=!v_f:"=`"`"`"!
 	rem Powershell
