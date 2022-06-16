@@ -1,5 +1,5 @@
 @echo off
-setlocal enableExtensions enableDelayedExpansion
+setLocal enableExtensions enableDelayedExpansion
 set br=^
 
 

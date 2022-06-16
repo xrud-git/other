@@ -31,7 +31,7 @@ Or other.
 
 	* Or is not distributed other than: privately, to small amount of persons, with not less than reasonable effort to prevent distribution beyond this limit.
 
-	Each part of work which is contributed to This Work. Unless its provided under other applicable license, Is licensed under this license, as a part of This Work. All authors and other entities transfer all their rights in that work, except: rights provided to them, in this license. To Admins.
+	Each part of work which is contributed to This Work. Unless its provided under other applicable license, is licensed under this license, as a part of This Work. All authors and other entities transfer all their rights in that work, except: rights provided to them, in this license. To Admins.
 
 	Noone except Admins, has right to otherwise distribute modified versions of: This Work, or part of This Work. Except as otherwise provided in other of Applicable Agreements between Admin and the subject entity.
 	
